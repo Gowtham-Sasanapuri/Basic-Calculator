@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1c1c1c;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgb(255, 255, 255);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.display #p{
+    width: 300px;
+    height: 50px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
+}
+.buttons{
+    color: aliceblue;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 15px;
+    text-align: center;
+}
+h1{
+    padding-bottom: 10px;
+}
+.num{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(3,60px);
+    grid-template-rows: repeat(4,60px);
+    gap: 20px 20px;
+}
+.ope{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,60px);
+    grid-template-rows: repeat(4,60px);
+    gap: 20px 20px;
+}
+.clear{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    color: white;
+    background-color: rgb(144, 11, 33);
+}
+.zero{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    color: white;
+    background-color: rgb(144, 11, 33);
+}
+button{
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+button:not(.zero):not(.clear):not(.equal):hover {
+cursor: pointer; 
+background-color: rgb(46, 55, 57);
+color: antiquewhite;
+}
